@@ -4,7 +4,7 @@ Repository for the Bluetooth module BT832 programming (Aalto University).
 
 # Bluetooth module BT832
 
-Programming was done using the Nordic SDK on a Windows environment. The code developped is an adaptation of the ble_app_uart example provided in the Nordic SDK.
+Programming was done using the Nordic SDK for nRF52 on a Windows environment. The code developped is an adaptation of the ble_app_uart example provided in the Nordic SDK.
 
 # Getting started
 
@@ -31,3 +31,7 @@ In order to enable debugging with JLink, you have to open JLinkRTTViewer and con
 ## Connecting to the Bluetooth module
 
 Connection is made via the Nordic nRF Connect mobile app. There are applications for pairing with Bluetooth Low Energy (BLE) devices on Windows, such as Bluetooth LE Explorer; however, this one occasionnally encountered bugs that were not present when connecting from the mobile app nRF Connect.
+
+# Additional Information
+
+More information can be found in the <a href='https://infocenter.nordicsemi.com/index.jsp?topic=%2Fcom.nordic.infocenter.sdk5.v15.3.0'>SDK documentation</a>
