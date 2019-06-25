@@ -11,12 +11,13 @@ Programming was done using the Nordic SDK for nRF52 on a Windows environment. Th
 ## Setup
 
 If you don't have it, get the following:
-- nRF Command Line Tools (nrfjprog) + JLink Software available on the <a href='https://www.nordicsemi.com'>Nordic official website</a>. If that is not already done, add nrfjprog to your PATH.
+- nRF Command Line Tools (nrfjprog) + JLink Software available on the <a href='https://www.nordicsemi.com'>Nordic official website</a>
 - Nordic SDK 15.3.0 also available on <a href='https://www.nordicsemi.com'>their website</a>
 - GNU Tools for ARM Embedded Processors 4.9 2015 or higher
 - Make for Windows 3.81 or higher <br>
 
-Then, go to `<SDK folder>/examples/ble_peripheral/ble_app_uart` and replace the file `main.c` by the file provided in this repository. Do the same for the file `sdk_config.h` located at `<SDK folder>/examples/ble_peripheral/ble_app_uart/pca10040/s132/config`, and for the file `Makefile` located at `<SDK folder>/examples/ble_peripheral/ble_app_uart/pca10040/s132/armgcc`. If you want additional debugging information when connecting to the Bluetooth module while the JLink probe is on, also replace `ble_nus.c` at `<SDK folder>§components/ble/ble_services/ble_nus` with the file of the same name from repository.
+Make sure that nrfjprog and JLink are in your PATH.
+Then, go to `<SDK folder>/examples/ble_peripheral/ble_app_uart` and replace the file `main.c` by the file provided in this repository. Do the same for the file `sdk_config.h` located at `<SDK folder>/examples/ble_peripheral/ble_app_uart/pca10040/s132/config`, and for the file `Makefile` located at `<SDK folder>/examples/ble_peripheral/ble_app_uart/pca10040/s132/armgcc`. If you want additional debugging information when connecting to the Bluetooth module while the JLink probe is on, enable the JLink Virtual COM port by entering the JLink CLI with `jlink` from the Command Prompt and typing `vcom enable`. Also replace `ble_nus.c` at `<SDK folder>§components/ble/ble_services/ble_nus` with the file of the same name from repository.
 <br>
 To be able to compile the file and to flash it, we need to provide the Makefile with environment specific options. Navigate to `<SDK folder>/components/toolchain/gcc` and edit these lines on the file `Makefile.windows` based on your own configuration, for example: <br>
 `GNU_INSTALL_ROOT := D:/Software/GNU_ARM_4.9-2015-q3/4.9 2015q3/bin/`<br>
