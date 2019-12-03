@@ -1,5 +1,7 @@
 # Description
 
+_This is a legacy project. Its content is no longer up to date._
+
 Repository for the Bluetooth module BT832 programming (Aalto University).
 
 # Bluetooth module BT832
